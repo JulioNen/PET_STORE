@@ -251,7 +251,7 @@
 		          		<configuration>
 		          			<type>runtime</type>	
 		          			<properties>
-		          				<cargo.hostname>10.0.0.4</cargo.hostname>
+		          				<cargo.hostname>52.178.139.242</cargo.hostname>
 		          				<cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
 		          				<cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
                                 <cargo.runtime.args>force=true</cargo.runtime.args>
