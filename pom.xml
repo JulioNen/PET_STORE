@@ -158,7 +158,7 @@
     	<profile>
 			<id>testRemoteServer</id>
 			<activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <dependencies>
                 <!--This has most of the needed dependencies : Derby, JPA, EJB, Java EE 6... -->
@@ -190,6 +190,68 @@
 		          			<type>runtime</type>	
 		          			<properties>
 		          				<cargo.hostname>10.100.16.97</cargo.hostname>
+		          				<cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
+		          				<cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
+                                <cargo.runtime.args>force=true</cargo.runtime.args>
+		          				<cargo.remote.username>admin</cargo.remote.username>
+                				<cargo.remote.password>admin</cargo.remote.password>
+		          			</properties> 
+		          		</configuration>
+				            <deployables>
+				                <deployable>
+				                    <groupId>${project.groupId}</groupId>
+				                    <artifactId>${project.artifactId}</artifactId>
+				                    <type>war</type>
+				                </deployable>
+				            </deployables>
+		          	</configuration>
+		          	<dependencies>
+		                <dependency>
+		                    <groupId>org.glassfish.main.deployment</groupId>
+		                    <artifactId>deployment-client</artifactId>
+		                    <version>3.1.2.2</version>
+		                </dependency>
+	            	</dependencies>
+		         </plugin>
+      			</plugins>
+            </build>
+		</profile>
+		
+		<profile>
+			<id>testRemoteServerCloud</id>
+			<activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <!--This has most of the needed dependencies : Derby, JPA, EJB, Java EE 6... -->
+                <dependency>
+                    <groupId>org.glassfish.main.extras</groupId>
+                    <artifactId>glassfish-embedded-all</artifactId>
+                    <version>${version.glassfish}</version>
+                    <scope>provided</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.arquillian.container</groupId>
+                    <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
+                    <version>${version.arquillian.container.glassfish}</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+		          <plugin>
+		          	<groupId>org.codehaus.cargo</groupId>
+		          	<artifactId>cargo-maven2-plugin</artifactId>
+		          	<version>1.6.2</version>
+		          	<configuration>
+		          		<container>
+		          			<containerId>glassfish3x</containerId>
+		          			<type>remote</type>
+		          		</container>
+		          		<configuration>
+		          			<type>runtime</type>	
+		          			<properties>
+		          				<cargo.hostname>52.178.139.242</cargo.hostname>
 		          				<cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
 		          				<cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
                                 <cargo.runtime.args>force=true</cargo.runtime.args>
