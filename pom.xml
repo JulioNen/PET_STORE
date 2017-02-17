@@ -258,6 +258,7 @@
 		          				<cargo.remote.username>admin</cargo.remote.username>
                 				<cargo.remote.password>admin</cargo.remote.password>
 		          			</properties> 
+		          			
 		          		</configuration>
 				            <deployables>
 				                <deployable>
