@@ -252,6 +252,7 @@
 		          		<configuration>		          		
 		          			<type>runtime</type>	
 		          			<properties>
+		          			
 		          				<cargo.hostname>52.178.136.204</cargo.hostname>
 		          				<cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
 		          				<!-- <cargo.servlet.port>8081</cargo.servlet.port> -->
