@@ -35,7 +35,7 @@
         <version.maven.war.plugin>2.4</version.maven.war.plugin>
         <version.maven.compiler.plugin>3.1</version.maven.compiler.plugin>
         <version.maven.surefire.plugin>3.0.0-M1</version.maven.surefire.plugin>
-        <version.maven.failsafe.plugin>2.16</version.maven.failsafe.plugin>
+        <version.maven.failsafe.plugin>3.0.0-M1</version.maven.failsafe.plugin>
         <version.jrebel>1.1.5</version.jrebel>
         <!--Project-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
